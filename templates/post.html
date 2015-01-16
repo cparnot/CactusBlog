@@ -4,7 +4,7 @@
 <nav>
 	<span class="prev">
 		{% if prevPost %}
-			<a href='{{ ROOT_URL }}/{{ prevPost.path }}'>
+			<a href='{% url '/' %}{{ prevPost.path }}'>
 				&laquo; {{ prevPost.title }}
 			</a>
 		{% else %}
@@ -18,7 +18,7 @@
 
 	<span class="next">
 		{% if nextPost %}
-			<a href='{{ ROOT_URL }}/{{ nextPost.path }}'>
+			<a href='{% url '/' %}{{ nextPost.path }}'>
 				{{ nextPost.title }} &raquo;
 			</a>
 		{% else %}
